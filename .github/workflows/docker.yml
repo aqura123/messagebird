@@ -56,7 +56,7 @@ jobs:
       # Derives tags from the release tag
       - name: Extract metadata
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           # Tags are applied to both registries. metadata-action lowercases
           # the image path automatically (ghcr.io requires lowercase).
@@ -118,7 +118,7 @@ jobs:
 
       - name: Extract metadata
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: |
             ${{ secrets.DOCKERHUB_USERNAME }}/songbird-worker
